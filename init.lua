@@ -403,6 +403,15 @@ require('lazy').setup({
 
       -- See `:help telescope.builtin`
       local snacks = require 'snacks'
+      local overseer = require 'overseer'
+
+      vim.keymap.set('n', '<leader>or', function()
+        overseer.run_template()
+      end, { desc = '[O]verseer [R]un' })
+
+      vim.keymap.set('n', '<leader>ot', function()
+        overseer.toggle()
+      end, { desc = '[O]verseer [T]oggle' })
 
       vim.keymap.set('n', '<leader>sh', function()
         snacks.picker.help()
