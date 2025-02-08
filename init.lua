@@ -406,30 +406,6 @@ require('lazy').setup({
       local snacks = require 'snacks'
       local overseer = require 'overseer'
 
-      vim.keymap.set('n', '<leader>e', function()
-        snacks.explorer()
-      end, { desc = '[E]xplorer' })
-
-      vim.keymap.set('n', '<leader>.', function()
-        snacks.scratch()
-      end, { desc = '[.]scratch' })
-
-      vim.keymap.set('n', '<leader>S', function()
-        snacks.scratch.select()
-      end, { desc = '[S]elect scratch' })
-
-      vim.keymap.set('n', '<leader>lg', function()
-        snacks.lazygit.open()
-      end, { desc = '[L]azy [g]it' })
-
-      vim.keymap.set('n', '<leader>ll', function()
-        snacks.lazygit.log()
-      end, { desc = '[L]azy [L]og' })
-
-      vim.keymap.set('n', '<leader>lf', function()
-        snacks.lazygit.log_file()
-      end, { desc = '[L]azy [F]ilelog' })
-
       vim.keymap.set('n', '<leader>or', function()
         overseer.run_template()
       end, { desc = '[O]verseer [R]un' })
@@ -437,53 +413,6 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>ot', function()
         overseer.toggle()
       end, { desc = '[O]verseer [T]oggle' })
-
-      vim.keymap.set('n', '<leader>sh', function()
-        snacks.picker.help()
-      end, { desc = '[S]earch [H]elp' })
-
-      vim.keymap.set('n', '<leader>sk', function()
-        snacks.picker.keymaps()
-      end, { desc = '[S]earch [K]eymaps' })
-
-      vim.keymap.set('n', '<leader>sf', function()
-        snacks.picker.files()
-      end, { desc = '[S]earch [F]iles' })
-
-      vim.keymap.set('n', '<leader>sw', function()
-        snacks.picker.grep_word()
-      end, { desc = '[S]earch current [W]ord' })
-
-      vim.keymap.set('n', '<leader>sg', function()
-        snacks.picker.grep()
-      end, { desc = '[S]earch by [G]rep' })
-
-      vim.keymap.set('n', '<leader>sd', function()
-        snacks.picker.diagnostics()
-      end, { desc = '[S]earch [D]iagnostics' })
-
-      vim.keymap.set('n', '<leader>sr', function()
-        snacks.picker.resume()
-      end, { desc = '[S]earch [R]esume' }) -- Not sure if Snacks has an exact equivalent
-
-      vim.keymap.set('n', '<leader>s.', function()
-        snacks.picker.smart()
-      end, { desc = '[S]earch Recent Files ("." for repeat)' })
-
-      vim.keymap.set('n', '<leader><leader>', function()
-        snacks.picker.buffers()
-      end, { desc = '[ ] Find existing buffers' })
-
-      -- Slightly advanced example of overriding default behavior and theme
-      vim.keymap.set('n', '<leader>/', function()
-        snacks.picker.lines()
-      end, { desc = '[/] Fuzzily search in current buffer' })
-
-      -- It's also possible to pass additional configuration options.
-      --  See `:help telescope.builtin.live_grep()` for information about particular keys
-      vim.keymap.set('n', '<leader>s/', function()
-        snacks.picker.grep_buffers()
-      end, { desc = '[S]earch [/] in Open Files' })
     end,
   },
 
@@ -755,12 +684,12 @@ require('lazy').setup({
     cmd = { 'ConformInfo' },
     keys = {
       {
-        '<leader>f',
+        '<leader>cf',
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
         end,
         mode = '',
-        desc = '[F]ormat buffer',
+        desc = '[C]ode [F]ormat',
       },
     },
     opts = {
