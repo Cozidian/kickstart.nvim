@@ -406,6 +406,30 @@ require('lazy').setup({
       local snacks = require 'snacks'
       local overseer = require 'overseer'
 
+      vim.keymap.set('n', '<leader>e', function()
+        snacks.explorer()
+      end, { desc = '[E]xplorer' })
+
+      vim.keymap.set('n', '<leader>.', function()
+        snacks.scratch()
+      end, { desc = '[.]scratch' })
+
+      vim.keymap.set('n', '<leader>S', function()
+        snacks.scratch.select()
+      end, { desc = '[S]elect scratch' })
+
+      vim.keymap.set('n', '<leader>lg', function()
+        snacks.lazygit.open()
+      end, { desc = '[L]azy [g]it' })
+
+      vim.keymap.set('n', '<leader>ll', function()
+        snacks.lazygit.log()
+      end, { desc = '[L]azy [L]og' })
+
+      vim.keymap.set('n', '<leader>lf', function()
+        snacks.lazygit.log_file()
+      end, { desc = '[L]azy [F]ilelog' })
+
       vim.keymap.set('n', '<leader>or', function()
         overseer.run_template()
       end, { desc = '[O]verseer [R]un' })
