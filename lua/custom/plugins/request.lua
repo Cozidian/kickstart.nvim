@@ -6,84 +6,84 @@ return {
   opts = {},
   keys = {
     {
-      '<leader>Rb',
+      '<leader>crb',
       function()
         require('kulala').scratchpad()
       end,
       desc = 'Open scratchpad',
     },
     {
-      '<leader>Rc',
+      '<leader>crc',
       function()
         require('kulala').copy()
       end,
       desc = 'Copy as cURL',
     },
     {
-      '<leader>RC',
+      '<leader>crC',
       function()
         require('kulala').from_curl()
       end,
       desc = 'Paste from cURL',
     },
     {
-      '<leader>Rg',
+      '<leader>crg',
       function()
         require('kulala').download_graphql_schema()
       end,
       desc = 'Download GraphQL schema',
     },
     {
-      '<leader>Ri',
+      '<leader>cri',
       function()
         require('kulala').inspect()
       end,
       desc = 'Inspect current request',
     },
     {
-      '<leader>Rn',
+      '<leader>crn',
       function()
         require('kulala').jump_next()
       end,
       desc = 'Jump to next request',
     },
     {
-      '<leader>Rp',
+      '<leader>crp',
       function()
         require('kulala').jump_prev()
       end,
       desc = 'Jump to previous request',
     },
     {
-      '<leader>Rq',
+      '<leader>crq',
       function()
         require('kulala').close()
       end,
       desc = 'Close window',
     },
     {
-      '<leader>Rr',
+      '<leader>crr',
       function()
         require('kulala').replay()
       end,
       desc = 'Replay the last request',
     },
     {
-      '<leader>Rs',
+      '<leader>crs',
       function()
         require('kulala').run()
       end,
       desc = 'Send the request',
     },
     {
-      '<leader>RS',
+      '<leader>crS',
       function()
         require('kulala').show_stats()
       end,
       desc = 'Show stats',
     },
     {
-      '<leader>Rt',
+      '<leader>crt',
       function()
         require('kulala').toggle_view()
       end,
