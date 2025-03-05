@@ -193,6 +193,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- switch to last open buffer
 vim.keymap.set('n', '<leader>bb', '<c-^>', { desc = 'Switch to last buffer' })
 
+-- keymap to open mini files explorer
+vim.keymap.set('n', '<leader>e', function()
+  require('mini.files').open()
+end, { desc = 'Open mini.files' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
