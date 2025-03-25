@@ -93,6 +93,11 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+vim.g.augment_workspace_folders = {
+  vim.fn.expand '~/code/private/chiefs',
+  vim.fn.expand '~/code/private/dnd-party-coop/questboard',
+}
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
